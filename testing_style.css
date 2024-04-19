@@ -1,0 +1,10 @@
+.box{
+    background-color: lightblue;
+    border: 10px solid red;
+    height: 100px;
+    width: 100px;
+    /* padding: the size of between content to border*/
+    padding: 10px;
+    /* margin:the size of the box itself other (DOM) elements */
+    margin: 10px;
+}

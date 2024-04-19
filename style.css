@@ -1,3 +1,101 @@
-.box{
-    background-color: red;
+body{
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    font-family: "Roboto Slab", serif;
 }
+
+.container{
+    background-color: white;
+    width: 400px;
+    /* margin auto :horizontal centralize*/
+    margin: 100px auto;
+    padding: 10px 100px;
+    border-radius: 20px;
+}
+
+.todo-list-title{
+    /* slightly adjust position to left */
+    position: relative;
+    left: -20px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+.inner-wrapper{
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+}
+.input-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+.input-wrapper #input{
+    background-color: transparent;
+    border:0px;
+    flex: 1;
+    outline: none;
+    padding: 10px 20px;
+    /* border-radius: 20px; */
+}
+
+.input-wrapper #add-button{
+    background-color: skyblue;
+    border: 0px;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.list{
+    list-style: none;
+    padding:0px;
+}
+.list li{
+    vertical-align: middle;
+    position: relative;
+    /* background-color: chocolate; */
+    margin: 10px;
+}
+.list li.checked{
+    text-decoration: line-through;
+}
+.list li::before{
+    content: "";
+    display: inline-block;
+    width:24px;
+    height:24px;
+    background-image: url(./assets/unchecked.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.list li.checked::before{
+    background-image: url(./assets/checked.svg);
+}
+.list li .delete{
+    background-image: url(./assets/delete.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right:0;
+    top: 0;
+    /* object-fit: cover; */
+    
+    padding:10px;
+}
+
+.list li .delete:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+
