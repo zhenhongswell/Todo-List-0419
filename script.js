@@ -22,10 +22,11 @@ function addItem() {
   //  delete button
   const deleteButton = document.createElement("span");
   deleteButton.classList.add("delete");
-  deleteButton.onclick = deleteItem;
-  //   deleteButton.addEventListener("click", () => {
-  //     deleteItem(newItem);
-  //   });
+  // deleteButton.onclick = deleteItem;
+  deleteButton.addEventListener("click", (e) => {
+    console.log(e.currentTarget);
+    deleteItem(e.currentTarget);
+  });
 
   newItem.appendChild(deleteButton);
   // append to list
@@ -38,9 +39,8 @@ function checkItem() {
   console.log(this);
   item.classList.toggle("checked");
 }
-function deleteItem() {
-  console.log(this.parentElement);
-  const item = this.parentElement;
+function deleteItem(currentTarget) {
+  const item = currentTarget.parentElement;
   const list = item.parentElement;
   list.removeChild(item);
   //   this.parentElement.removeChild();
