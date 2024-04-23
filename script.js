@@ -88,10 +88,12 @@ function deleteItem(currentTarget) {
   const list = item.parentElement;
   const index = Array.from(list.childNodes).indexOf(item);
   // remove one ,using index
-  listState.splice(index, 1);
+  listState = listState.filter((value, i) => {
+    return i !== index;
+  });
+  //   listState.splice(index, 1);
   saveState(listState);
   list.removeChild(item);
-  //   this.parentElement.removeChild();
 }
 
 initList();
