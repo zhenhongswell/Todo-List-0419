@@ -57,7 +57,7 @@ function addItem() {
   deleteButton.classList.add("delete");
   // deleteButton.onclick = deleteItem;
   deleteButton.addEventListener("click", (e) => {
-    console.log(e.currentTarget);
+    e.stopPropagation();
     deleteItem(e.currentTarget);
   });
 
@@ -84,7 +84,6 @@ function checkItem() {
 }
 function deleteItem(currentTarget) {
   const item = currentTarget.parentElement;
-
   const list = item.parentElement;
   const index = Array.from(list.childNodes).indexOf(item);
   // remove one ,using index
