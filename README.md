@@ -22,3 +22,8 @@ checked: false,
 -checkItem:勾選,li 中 toggle checked class,
 並修改 liststate 中的 checked 狀態,
 做 savestate.
+
+note:
+preventDefault 防止元件預設動作：防止 form 在表單送出後,刷新網頁。
+listState = listState.filter((value, i)
+-i:iteratorable 的 index
