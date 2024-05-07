@@ -39,7 +39,6 @@ function initList() {
   }
 }
 
-function deleteItem() {}
 function addItem() {
   const list = document.querySelector(".list");
   const input = inputWrapper.querySelector("#input");
@@ -107,5 +106,6 @@ addButton.addEventListener("click", () => {
 
 const form = document.querySelector(".input-wrapper");
 form.addEventListener("click", (e) => {
+  // prevent page refresh after clicked
   e.preventDefault();
 });
